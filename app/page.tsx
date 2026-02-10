@@ -284,6 +284,48 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main >
+      {/* JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "AI学舎",
+            description: "大学生によるマンツーマンAI活用講習",
+            provider: {
+              "@type": "Organization",
+              name: "AI学舎",
+              url: "https://ai-gakusha.com",
+            },
+            areaServed: "Japan",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "AI講習プラン",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "無料ヒアリング",
+                  },
+                  price: "0",
+                  priceCurrency: "JPY",
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "AI個別講習 (60分)",
+                  },
+                  price: "5000",
+                  priceCurrency: "JPY",
+                },
+              ],
+            },
+          }),
+        }}
+      />
+    </main>
   );
 }
