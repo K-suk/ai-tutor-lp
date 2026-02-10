@@ -1,28 +1,9 @@
 import React from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-background-light dark:bg-background-dark text-text-main dark:text-white transition-colors duration-200">
-      {/* Header */}
-      <header className="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7f0f3] bg-background-light/95 dark:bg-background-dark/95 px-6 lg:px-40 py-4 backdrop-blur-md">
-        <div className="flex items-center gap-2">
-          <div className="flex items-center justify-center bg-primary rounded-lg p-2 text-white">
-            <span className="material-symbols-outlined text-2xl">school</span>
-          </div>
-          <h2 className="text-text-main dark:text-white text-xl font-bold tracking-tight">
-            AI学舎 <span className="text-sm font-normal text-primary hidden md:inline ml-1">大学生のAI講習</span>
-          </h2>
-        </div>
-        <div className="flex items-center gap-4">
-          <a className="hidden md:block text-text-main dark:text-gray-300 font-medium hover:text-primary" href="#faq">
-            よくある質問
-          </a>
-          <button className="flex min-w-[100px] cursor-pointer items-center justify-center rounded-full h-10 px-6 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all">
-            <span>お問い合わせ</span>
-          </button>
-        </div>
-      </header>
-
+    <main className="flex-1 w-full flex flex-col">
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center px-6 py-16 lg:px-40 lg:py-24 bg-gradient-to-b from-primary/5 to-transparent">
         <div className="max-w-[960px] w-full flex flex-col items-center text-center">
@@ -39,9 +20,9 @@ export default function Home() {
             大学生がマンツーマンで、優しく丁寧にサポートします。
           </p>
           <div className="flex flex-col items-center gap-4 w-full">
-            <button className="w-full max-w-md flex cursor-pointer items-center justify-center rounded-xl h-16 px-8 bg-primary text-white text-xl font-black shadow-xl shadow-primary/30 hover:scale-[1.02] transition-transform">
+            <Link href="/contact" className="w-full max-w-md flex cursor-pointer items-center justify-center rounded-xl h-16 px-8 bg-primary text-white text-xl font-black shadow-xl shadow-primary/30 hover:scale-[1.02] transition-transform">
               <span>無料ヒアリング（15分）を予約する</span>
-            </button>
+            </Link>
             <p className="text-sm text-text-sub flex items-center gap-2">
               <span className="material-symbols-outlined text-base text-accent-orange">check_circle</span> オンライン実施 ／ 売り込み・勧誘一切なし
             </p>
@@ -173,7 +154,7 @@ export default function Home() {
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary">check</span> 目的や悩みのヒアリング</li>
                 <li className="flex items-center gap-2"><span className="material-symbols-outlined text-primary">check</span> 最適なツールの選定</li>
               </ul>
-              <button className="w-full h-14 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary/5 transition-colors">無料で相談する</button>
+              <Link href="/contact" className="flex items-center justify-center w-full h-14 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary/5 transition-colors">無料で相談する</Link>
             </div>
             {/* Pricing Card 2 */}
             <div className="bg-white dark:bg-gray-800 rounded-3xl border-2 border-accent-orange p-8 shadow-xl relative overflow-hidden">
@@ -195,7 +176,7 @@ export default function Home() {
                   <span className="font-bold text-accent-orange">90%オフ！</span>
                 </div>
               </div>
-              <button className="w-full h-14 rounded-xl bg-accent-orange text-white font-bold shadow-lg shadow-accent-orange/20 hover:scale-[1.02] transition-transform">講習を申し込む</button>
+              <Link href="/contact" className="flex items-center justify-center w-full h-14 rounded-xl bg-accent-orange text-white font-bold shadow-lg shadow-accent-orange/20 hover:scale-[1.02] transition-transform">まずは無料で相談から！</Link>
             </div>
           </div>
         </div>
@@ -208,22 +189,21 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-10 bg-primary/5 rounded-3xl p-8 md:p-12">
             <div
               className="size-48 shrink-0 rounded-full bg-cover bg-center border-4 border-white shadow-lg"
-              data-alt="Portrait of a friendly smiling university student"
-              style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIPO0a9eiCthxDP_ZABDnozuBL3qV2Yxtr0woltj1fXUrNH0CPKtNzisCz9-xgOq2uCAXhHeK6XMUjl3CTMXo2GYaz9IaaPht-mo6PiT6z-vlYEtM-MWpc2zAb_bj8w_48Z5s9o1KccY8m60jBR_GilhqiRuQYbKh4lge8xjLrBjyR2PmqOafvDK88mNM_Xdr0Vgme3UYyUj4iph_5l9gJBSQW5TJU7x6TX4fIlw_eRXJ-akuQfs6BJ9ptm2ZTgKAgCPmbOXGROSc')" }}
+              data-alt="Portrait of Rito Yamazaki"
+              style={{ backgroundImage: "url('/images/rito_logo.jpg')" }}
             ></div>
             <div className="flex-1 text-center md:text-left">
-              <h3 className="text-2xl font-bold mb-2">佐藤 健一 <span className="text-sm font-normal text-text-sub">(慶應義塾大学 3年)</span></h3>
+              <h3 className="text-2xl font-bold mb-2">山﨑 リト<span className="text-sm font-normal text-text-sub">(青山学院大学 4年)</span></h3>
               <p className="text-text-main dark:text-gray-300 leading-relaxed mb-6">
                 「AIは魔法の道具ではありませんが、正しく使えば人生をより豊かにする強力なパートナーになります。難しい言葉は使わず、皆さんの『やりたいこと』に寄り添って、楽しく学べる時間を提供します。趣味の料理、旅行の計画、お仕事の効率化など、何でもご相談ください！」
               </p>
-              <div className="flex flex-wrap justify-center md:justify-start gap-4">
+              {/* <div className="flex flex-wrap justify-center md:justify-start gap-4">
                 <div className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg text-sm font-medium border border-primary/20">
-                  <span className="material-symbols-outlined text-primary">verified_user</span> 講師歴3年
+                  <span className="material-symbols-outlined text-primary">verified_user</span> 講師歴1年
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg text-sm font-medium border border-primary/20">
                   <span className="material-symbols-outlined text-primary">history_edu</span> 講習実績 200名突破
-                </div>
-              </div>
+                </div> */}
             </div>
           </div>
         </div>
@@ -298,35 +278,12 @@ export default function Home() {
             あなたの新しい一歩を、私たちが全力でサポートします。
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-            <button className="w-full md:w-auto min-w-[300px] h-16 bg-white text-primary rounded-xl text-xl font-bold shadow-2xl hover:bg-gray-50 transition-colors">
+            <Link href="/contact" className="flex items-center justify-center w-full md:w-auto min-w-[300px] h-16 bg-white text-primary rounded-xl text-xl font-bold shadow-2xl hover:bg-gray-50 transition-colors">
               無料ヒアリングを予約する
-            </button>
-            <a className="text-white border-b border-white/50 hover:border-white transition-all font-bold" href="#">
-              LINEで質問する
-            </a>
+            </Link>
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="px-6 py-12 lg:px-40 bg-background-light dark:bg-background-dark border-t border-gray-100 dark:border-gray-800">
-        <div className="max-w-[960px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex flex-col items-center md:items-start gap-2">
-            <div className="flex items-center gap-2">
-              <div className="flex items-center justify-center bg-primary rounded p-1.5 text-white">
-                <span className="material-symbols-outlined text-xl">school</span>
-              </div>
-              <h2 className="text-text-main dark:text-white text-lg font-bold">AI学舎</h2>
-            </div>
-            <p className="text-xs text-text-sub">© 2024 AI学舎. All rights reserved.</p>
-          </div>
-          <div className="flex gap-8 text-sm text-text-sub font-medium">
-            <a className="hover:text-primary transition-colors" href="#">利用規約</a>
-            <a className="hover:text-primary transition-colors" href="#">プライバシーポリシー</a>
-            <a className="hover:text-primary transition-colors" href="#">運営者情報</a>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </main >
   );
 }
